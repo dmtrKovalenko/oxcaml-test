@@ -1,29 +1,33 @@
-let create_list n =
-  let rec aux acc i =
-    if i > n then acc
-    else aux (i :: acc) (i + 1)
-  in
-  aux [] 1
+open Stdlib_upstream_compatible
 
-let sum_list lst =
-  List.fold_left (+) 0 lst
+type 'a option_custom = Null | This of 'a
 
-let map_double lst =
-  List.map (fun x -> x * 2) lst
+let hd = function [] -> Null | x :: _ -> This x
+let rec tl = function [] -> Null | [ x ] -> This x | _ :: xs -> tl xs
 
-let filter_even lst =
-  List.filter (fun x -> x mod 2 = 0) lst
+let add_arrays_imperative a b c =
+  let n = Iarray.length a in
+  for i = 0 to n - 1 do
+    c.(i) <- a.(i) +. b.(i)
+  done
+
+let lol () =
+  let a = [: 1.0; 2.0; 3.0 :] in
+  let b = [: 4.0; 5.0; 6.0 :] in
+  let sum = Array.create_float (Array.length a) in
 
 let () =
-  let n = 100000 in
-  let start_time = Sys.time () in
-  
-  let lst = create_list n in
-  let doubled = map_double lst in
-  let evens = filter_even doubled in
-  let total = sum_list evens in
-  
-  let end_time = Sys.time () in
-  Printf.printf "List operations on %d elements\n" n;
-  Printf.printf "Sum of even doubled numbers: %d\n" total;
-  Printf.printf "Time: %.6f seconds\n" (end_time -. start_time)
+  let list = [ 1; 2; 3; 4; 5 ] in
+  let h = hd list in
+  let t = tl list in
+
+  Printf.printf "hd: %s; tl: %s\n"
+    (match h with Null -> "Null" | This v -> string_of_int v)
+    (match t with Null -> "Null" | This v -> string_of_int v);
+
+  let a = [: 1.0; 2.0; 3.0 :] in
+  let b = [: 4.0; 5.0; 6.0 :] in
+  let sum = Array.create_float (Array.length a) in
+  add_arrays_imperative a b sum;
+  Array.iter (Printf.printf "%f ") sum;
+
