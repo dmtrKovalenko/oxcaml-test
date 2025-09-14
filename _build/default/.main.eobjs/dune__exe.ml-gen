@@ -6,6 +6,9 @@ module Create_many_records = Dune__exe__Create_many_records
 (** @canonical Dune__exe.Fibonacci *)
 module Fibonacci = Dune__exe__Fibonacci
 
+(** @canonical Dune__exe.List_operations *)
+module List_operations = Dune__exe__List_operations
+
 (** @canonical Dune__exe.Main *)
 module Main = Dune__exe__Main
 

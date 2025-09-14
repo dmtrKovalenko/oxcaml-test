@@ -13,5 +13,6 @@
 #  ; build_dir = In_build_dir "default"
 #  ; instrument_with = []
 #  }
-$ /Users/neogoose/.opam/5.2.0+ox/bin/ocamlc.opt -config > /var/folders/2g/7x1n64cj2pxcqrg1rk68nws80000gn/T/dune_0195bf_output
-$ (cd _build/default && /Users/neogoose/.opam/5.2.0+ox/bin/ocamldep.opt -modules -impl main.ml) > _build/default/.main.eobjs/dune__exe__Main.impl.d
+$ /Users/neogoose/.opam/5.2.0+ox/bin/ocamlc.opt -config > /var/folders/2g/7x1n64cj2pxcqrg1rk68nws80000gn/T/dune_bcfbc8_output
+$ (cd _build/default && /Users/neogoose/.opam/5.2.0+ox/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w -49 -nopervasives -nostdlib -g -bin-annot -bin-annot-occurrences -I .main.eobjs/byte -no-alias-deps -opaque -o .main.eobjs/byte/dune__exe.cmo -c -impl .main.eobjs/dune__exe.ml-gen)
+$ (cd _build/default && /Users/neogoose/.opam/5.2.0+ox/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w -49 -nopervasives -nostdlib -g -I .main.eobjs/byte -I .main.eobjs/native -cmi-file .main.eobjs/byte/dune__exe.cmi -no-alias-deps -opaque -o .main.eobjs/native/dune__exe.cmx -c -impl .main.eobjs/dune__exe.ml-gen)
