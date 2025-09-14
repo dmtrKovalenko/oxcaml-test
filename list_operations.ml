@@ -1,4 +1,5 @@
 open Stdlib_upstream_compatible
+open Ocaml_simd
 
 type 'a option_custom = Null | This of 'a
 
