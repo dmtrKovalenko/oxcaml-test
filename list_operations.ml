@@ -17,10 +17,10 @@ let add_arrays_simd_f64x2 a b c =
   let i = ref 0 in
 
   while !i + simd_size <= n do
-    let va = Ocaml_simd_sse.Float64x2.load a !i in
-    let vb = Ocaml_simd_sse.Float64x2.load b !i in
-    let vc = Ocaml_simd_sse.Float64x2.add va vb in
-    Ocaml_simd_sse.Float64x2.store c !i vc;
+    let va = Ocaml_simd.Float64x2.load a !i in
+    let vb = Ocaml_simd.Float64x2.load b !i in
+    let vc = Ocaml_simd.Float64x2.add va vb in
+    Ocaml_simd.Float64x2.store c !i vc;
     i := !i + simd_size
   done;
 
@@ -34,10 +34,10 @@ let add_arrays_simd_float32x4 a b c =
   let i = ref 0 in
 
   while !i + simd_size <= n do
-    let va = Ocaml_simd_sse.Float32x4.load a !i in
-    let vb = Ocaml_simd_sse.Float32x4.load b !i in
-    let vc = Ocaml_simd_sse.Float32x4.add va vb in
-    Ocaml_simd_sse.Float32x4.store c !i vc;
+    let va = Ocaml_simd.Float32x4.load a !i in
+    let vb = Ocaml_simd.Float32x4.load b !i in
+    let vc = Ocaml_simd.Float32x4.add va vb in
+    Ocaml_simd.Float32x4.store c !i vc;
     i := !i + simd_size
   done;
 
