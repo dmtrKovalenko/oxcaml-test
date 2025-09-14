@@ -1,0 +1,10 @@
+lib: [
+  "_build/install/default/lib/oxcaml-simd-test/META"
+  "_build/install/default/lib/oxcaml-simd-test/dune-package"
+]
+bin: [
+  "_build/install/default/bin/oxcaml-simd-test"
+]
+doc: [
+  "_build/install/default/doc/oxcaml-simd-test/README.md"
+]

@@ -1,0 +1,17 @@
+# dune build
+# OCAMLPARAM: unset
+# Shared cache: enabled-except-user-rules
+# Shared cache location: /Users/neogoose/.cache/dune/db
+# Workspace root: /Users/neogoose/dev/oxcaml-test
+# Auto-detected concurrency: 16
+# Dune context:
+#  { name = "default"
+#  ; kind = "default"
+#  ; profile = Dev
+#  ; merlin = true
+#  ; fdo_target_exe = None
+#  ; build_dir = In_build_dir "default"
+#  ; instrument_with = []
+#  }
+$ /Users/neogoose/.opam/5.2.0+ox/bin/ocamlc.opt -config > /var/folders/2g/7x1n64cj2pxcqrg1rk68nws80000gn/T/dune_0195bf_output
+$ (cd _build/default && /Users/neogoose/.opam/5.2.0+ox/bin/ocamldep.opt -modules -impl main.ml) > _build/default/.main.eobjs/dune__exe__Main.impl.d
