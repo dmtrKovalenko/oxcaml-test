@@ -1,5 +1,5 @@
 (executable
- (public_name oxcaml-simd-test)
+ (public_name simd_test)
  (name main)
  (libraries ocaml_simd)
  (ocamlopt_flags (:standard -O3 -dvectorize)))

@@ -1,8 +1,8 @@
 (lang dune 3.0)
 
-(name oxcaml-simd-test)
+(name simd_test)
 
 (package
- (name oxcaml-simd-test)
- (depends ocaml dune stdlib_upstream_compatible)
- (synopsis "OCaml SIMD operations test with OxCaml"))
+ (name simd_test)
+ (depends ocaml dune)
+ (synopsis "OCaml SIMD operations test"))
